@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+
+    font-family: 'League Spartan';
+    cursor: pointer;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    /* gap: 5rem; */
+    background:  hsl(0, 0%, 0%);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+body.active2 {
+    background-color: hsl(0, 0%, 0%);
+}
+
+body.active3 {
+    background:  hsl(268, 29%, 53%);
+}
+.calc_container{
+    width: 70%;
+    max-width: 45rem;
+    background:  hsl(222, 26%, 31%);
+    
+}
+
+body.active2 .calc_container {
+     background:  hsl(0, 0%, 90%);
+}
+
+body.active3 .calc_container {
+     background: hsl(268, 75%, 9%) ;
+}
+
+.num {
+    display: flex;
+    justify-content: flex-end;
+    width: 92%;
+    gap: 1rem;
+    color: white;
+    padding-top: 2rem;
+    padding-right: .5rem;
+}
+
+body.active2 .num,
+body.active2 .calc,
+body.active2 .theme >p,
+body.active2 button,
+body.active2 input {
+    color: hsl(60, 10%, 19%);
+}
+
+body.active3 .num,
+body.active3 .calc,
+body.active3 .theme >p,
+body.active3 button,
+body.active3 input {
+    color: hsl(52, 100%, 62%);
+} 
+
+
+.toggle {
+    display: flex;
+    width: 92%;
+    margin: 1rem;
+    justify-content: space-between;
+    padding:.5rem 1rem;
+}
+
+.calc { 
+    color: hsl(0, 0%, 100%);
+    font-size: 1.8rem;
+    /* padding-left: .6rem; */
+}
+
+.theme {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: .7rem;
+}
+
+.theme p {
+    text-transform: uppercase;
+    color: hsl(0, 0%, 100%);
+    /* font-family: 'League Spartan'; */
+}
+
+.theme_box {
+    display: block;
+    width: 65px;
+    height: 18px;
+    border-radius: 30px;
+    background: hsl(223, 31%, 20%);
+    position: relative;
+}
+
+.theme_circle {
+    z-index: 1;
+    width: 1rem;
+    background:  hsl(6, 63%, 50%);
+    height: 1rem;
+    border-radius: 2rem;
+    top: .1rem;
+    left: .01rem;
+    position: absolute;
+
+}
+
+input {
+    background: hsl(224, 36%, 15%);
+    margin-left: 2rem;
+    padding: 2rem;
+    width: 90%;
+    border-radius: .7rem;
+    text-align: end;
+    border: none;
+    font-size: 2.2rem;
+    color: white;
+}
+
+body.active2 input {
+    background:  hsl(0, 0%, 93%);
+}
+
+body.active2 .theme_box,
+body.active2 .main-calc,
+body.active2 button {
+    background: hsl(0, 5%, 81%);
+}
+
+body.active3 .theme_box,
+body.active3 .main-calc,
+body.active3 button,
+body.active3 input {
+    background: hsl(268, 71%, 12%);
+}
+
+/* main */
+.main-calc {
+    background: hsl(223, 31%, 20%);
+    margin: 2rem;
+    border-radius: 1rem;
+}
+.calcbody {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:  minmax(100px, auto) repeat(4, 1fr);; 
+    padding: 1.4rem; 
+}
+
+button {
+    border: none;
+    outline: none;
+    background: hsl(30, 25%, 89%);
+    cursor: pointer;
+    padding: 0;
+    margin: .5rem;
+    border-radius: .7rem;
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: 700;
+    color: hsl(221, 14%, 31%);
+    box-shadow: 2px 3px 1px  hsl(28, 16%, 65%);
+}
+
+body.active2 button{
+    background: hsl(30, 25%, 89%);
+    box-shadow: 2px 3px 1px  hsl(35, 11%, 61%);
+
+}
+
+body.active3 button {
+    background: hsl(268, 47%, 21%);
+    box-shadow: 2px 3px 1px hsl(290, 70%, 36%);
+
+}
+
+button:hover {
+    background: white;
+    transition: .2s;
+}
+
+body.active2 button:hover {
+    background: hsl(0, 0%, 100%);
+}
+
+body.active3 button:hover {
+    background: hsl(268, 36%, 48%);
+}
+.span-two {
+  grid-column: span 2;
+}
+
+.gray {
+    box-shadow: 2px 3px 1px  hsl(224, 28%, 35%);
+    color: white;
+    background: hsl(222, 26%, 31%);
+}
+
+body.active2 .gray {
+    box-shadow: 2px 3px 1px  hsl(185, 58%, 25%);
+    color: hsl(0, 0%, 100%);
+    background: hsl(185, 42%, 37%);
+}
+
+body.active3 .gray {
+    box-shadow: 2px 3px 1px  hsl(285, 91%, 52%);
+    color: white;
+    background: hsl(281, 89%, 26%);
+}
+
+.gray:hover {
+    background: hsla(221, 45%, 83%, 0.5);
+}
+
+body.active2 .gray:hover {
+    background: hsl(186, 31%, 59%);
+}
+
+body.active3 .gray:hover {
+    background: hsl(281, 33%, 49%);
+}
+
+.tomato {
+    color: white;
+    background:  hsl(6, 63%, 50%);
+    box-shadow: 2px 3px 1px  hsl(6, 70%, 34%);
+
+}
+
+body.active2 .tomato {
+    color: white;
+    background:   hsl(25, 98%, 40%);
+    box-shadow: 2px 3px 1px  hsl(25, 99%, 27%);
+
+}
+
+body.active3 .tomato {
+    color: white;
+    background: hsl(176, 100%, 44%);
+    box-shadow: 2px 3px 1px hsl(177, 92%, 70%) ;
+
+}
+.tomato:hover {
+    background:  hsl(6, 81%, 69%);
+
+}
+
+body.active2 .tomato:hover {
+    background:   hsl(25, 66%, 63%);
+}
+
+body.active3 .tomato:hover {
+    background: hsl(176, 69%, 69%);
+
+}

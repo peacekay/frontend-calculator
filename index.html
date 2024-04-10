@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="style.js"></script>
+</head>
+<body onload=" alert('welcome')">
+  
+  <section class="calc_container">
+    <header class="title">
+      <div class="num">
+        <p data-color id="one">1</p>
+        <p data-color id="two">2</p>
+        <p data-color id="three">3</p>
+      </div>
+      <div class="toggle">
+        <div class="calc">
+          <h1>calc</h1>
+        </div>
+        <div class="theme">
+          <p>theme</p>
+          <div class="theme_box">
+            <div class="theme_circle" id="toggle"></div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    
+      
+    
+    
+    <section class="screen">
+    <input type="text" id="display" class="display" readonly>
+    <main class="main-calc">
+      
+      <div class="calcbody">
+
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="removeDisplay('')" class="gray">DEL</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('+')"ion>+</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <button onclick="appendToDisplay('x')">x</button>
+        <button onclick="clearDisplay('')" class="span-two gray">RESET</button>
+        <button onclick="calculate('')" class="span-two tomato">=</button>
+      </div>
+    </main>
+    </section>
+  </section>
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
